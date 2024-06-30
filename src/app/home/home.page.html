@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Calcule seu Abastecimento
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label position="floating">Preço do Etanol</ion-label>
+    <ion-input type="number" [(ngModel)]="precoEtanol"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Preço da Gasolina</ion-label>
+    <ion-input type="number" [(ngModel)]="precoGasolina"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" (click)="calcular()">Calcular</ion-button>
+
+  <ion-card *ngIf="resultado">
+    <ion-card-header>
+      <ion-card-title>Abasteça com {{ resultado }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      O preço ideal para abastecer com {{ combustivelNaoVantajoso }} seria menor que: {{ precoIdeal | currency }}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

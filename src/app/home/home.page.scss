@@ -1,0 +1,11 @@
+/* Adicione estilos globais aqui */
+ion-header, ion-footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  color: #333;
+}
+
+ion-content {
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+}
